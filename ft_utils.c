@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 00:26:21 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 02:10:23 by tcherepoff       ###   ########.fr       */
+/*   Updated: 2024/11/27 17:12:09 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 int	ft_type(char c, va_list args)
 {
 	int	len;
-	
+
+	len = 0;
 	if (c == 'c')
 		len = ft_count_c(args);
 	else if (c == 's')
@@ -29,7 +30,7 @@ int	ft_type(char c, va_list args)
 		len = ft_count_x(args, c == 'X');
 	else if (c == 'p')
 		len = ft_count_p(args);
-	else if (c == '%') 
+	else if (c == '%')
 	{
 		ft_putchar_fd('%', 1);
 		len = 1;

@@ -6,13 +6,13 @@
 /*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 17:44:27 by ltcherep          #+#    #+#             */
-/*   Updated: 2024/11/16 18:47:06 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:40:23 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
 		return ;
@@ -22,4 +22,3 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-

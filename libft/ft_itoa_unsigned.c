@@ -1,52 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_itoa_unsigned.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/23 07:51:51 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 20:38:14 by ltcherep         ###   ########.fr       */
+/*   Created: 2024/11/27 10:50:12 by ltcherep          #+#    #+#             */
+/*   Updated: 2024/11/27 13:09:27 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
 
-int	ft_browse(const char *str, va_list args)
+int	ft_len_unsigned(unsigned long n)
 {
 	int	i;
-	int	size;
 
 	i = 0;
-	size = 0;
-	if (!str)
-		return (0);
-	while (str[i])
+	if (n == 0)
+		i++;
+	while (n != 0)
 	{
-		if (str[i] == '%')
-		{
-			i++;
-			if (str[i])
-				size += ft_type(str[i], args);
-		}
-		else
-		{
-			ft_putchar_fd(str[i], 1);
-			size++;
-		}
+		n /= 10;
 		i++;
 	}
-	return (size);
+	return (i);
 }
 
-int	ft_printf(const char *str, ...)
+char	*ft_itoa_unsigned(unsigned int n)
 {
-	va_list	args;
-	int		a;
+	char			*str;
+	int				len;
+	unsigned long	nb;
 
-	va_start(args, str);
-	a = ft_browse(str, args);
-	va_end(args);
-	return (a);
+	nb = n;
+	len = ft_len_unsigned(nb);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	while (nb > 0)
+	{
+		str[len - 1] = (nb % 10) + 48;
+		nb /= 10;
+		len--;
+	}
+	return (str);
 }

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 04:16:13 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 02:08:52 by tcherepoff       ###   ########.fr       */
+/*   Updated: 2024/11/27 17:12:02 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef PRINTF_H
+# define PRINTF_H
 
-#include <stdarg.h>
+# include <string.h>
+# include <stdlib.h>
+# include <ctype.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int	ft_printf(const char *src, ...);
 int	ft_browse(const char *str, va_list args);

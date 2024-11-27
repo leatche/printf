@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 18:23:25 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 01:57:47 by tcherepoff       ###   ########.fr       */
+/*   Updated: 2024/11/04 16:59:04 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *src)
 	size_t	i;
 
 	i = 0;
-	while (src && src[i])
+	while (src[i])
 		i++;
 	return (i);
 }

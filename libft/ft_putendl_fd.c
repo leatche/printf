@@ -6,7 +6,7 @@
 /*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:18:57 by ltcherep          #+#    #+#             */
-/*   Updated: 2024/11/09 17:50:44 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:39:01 by ltcherep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	ft_putstr_fd(s, fd);
 	write (fd, "\n", 1);
 }
-
