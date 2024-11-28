@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 00:26:21 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 17:12:09 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/28 01:00:50 by tcherepoff       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_type(char c, va_list args)
 {

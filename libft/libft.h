@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:50:12 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 10:53:52 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/28 00:54:50 by tcherepoff       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-char	*ft_itoa_base(unsigned int num, int base, int uppercase);
+char	*ft_itoa_base(unsigned long int num, int base, int uppercase);
 char	*ft_itoa_unsigned(unsigned int n);
 
 #endif

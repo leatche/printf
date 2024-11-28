@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 01:57:38 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 10:47:59 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/28 00:56:00 by tcherepoff       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_num_len(unsigned int num, int base)
+static int	ft_num_len(unsigned long int num, int base)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ static int	ft_num_len(unsigned int num, int base)
 	return (len);
 }
 
-char	*ft_itoa_base(unsigned int num, int base, int uppercase)
+char	*ft_itoa_base(unsigned long int num, int base, int uppercase)
 {
 	char	*str;
 	char	*base_chars;

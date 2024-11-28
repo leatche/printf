@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_count_u.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:08:02 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 21:32:59 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/28 01:00:50 by tcherepoff       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 #include "limits.h"
 
 int	ft_count_u(va_list args)
@@ -21,20 +21,10 @@ int	ft_count_u(va_list args)
 	int				len;
 
 	number = va_arg(args, unsigned int);
-	if (number == UINT_MAX)
-	{
-		ft_putstr_fd("0xffffffff", 1);
-		return (10);
-	}
-	if (number < 0)
-		return (0);
 	str = ft_itoa_unsigned(number);
 	if (!str)
-        return (0);
-	if (number == 4294967295)
-		write(1, "4294967295", 11);
-	else
-		ft_putstr_fd(str, 1);
+		return (0);
+	ft_putstr_fd(str, 1);
 	len = ft_strlen(str);
 	free (str);
 	return (len);

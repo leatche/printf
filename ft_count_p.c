@@ -3,34 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_count_p.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltcherep <ltcherep@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:09:40 by tcherepoff        #+#    #+#             */
-/*   Updated: 2024/11/27 20:55:55 by ltcherep         ###   ########.fr       */
+/*   Updated: 2024/11/28 01:00:50 by tcherepoff       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 #include "limits.h"
 
 int	ft_count_p(va_list args)
 {
 	void				*str;
-	unsigned long long	new;
+	unsigned long		new;
 	char				*help;
 	int					len;
 
 	str = va_arg(args, void *);
-	if (str == (void *)ULONG_MAX)
-		ft_putstr_fd("0xffffffffffffffff", 1);
-	if (str == (void *)LONG_MAX)
-		ft_putstr_fd("0x7fffffffffffffff", 1);
-	if (str == (void *)LONG_MIN)
-		ft_putstr_fd("0x8000000000000000", 1);
-	if (str == (void *)LONG_MAX || (str == (void *)ULONG_MAX) || str == (void *)LONG_MIN)
-		return (18);
-	new = (unsigned long long)str;
+	new = (unsigned long)str;
 	if (str == NULL)
 	{
 		ft_putstr_fd("(nil)", 1);
