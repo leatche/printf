@@ -6,7 +6,7 @@
 #    By: tcherepoff <tcherepoff@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 04:00:21 by tcherepoff        #+#    #+#              #
-#    Updated: 2024/11/27 01:44:58 by tcherepoff       ###   ########.fr        #
+#    Updated: 2024/11/28 01:03:13 by tcherepoff       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ all:		$(NAME)
 
 clean:
 			$(MAKE) clean -C ./libft
-			$(RM)
+			$(RM) $(OBJS)
 
 fclean:		clean
 			$(MAKE) fclean -C ./libft
